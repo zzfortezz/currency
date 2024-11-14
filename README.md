@@ -21,7 +21,7 @@ package main
 
 import (
     "fmt"
-    "github.com/yourusername/currency"
+    "github.com/zzforetezz/currency"
 )
 
 func main() {
