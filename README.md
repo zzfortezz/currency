@@ -11,7 +11,7 @@ A Go package for formatting currency amounts according to various international 
 ## Installation
 
 ```bash
-go get github.com/yourusername/currency
+go get github.com/zzfortezz/currency
 ```
 
 ## Example
