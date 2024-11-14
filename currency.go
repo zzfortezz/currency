@@ -15,6 +15,18 @@ var formatMapping = []struct {
 	{false, false, "{{value}}{{symbol}}"},
 	{false, true, "{{value}} {{symbol}}"},
 }
+
+// formatNumber formats a given float64 amount into a string with specified decimal digits,
+// decimal separator, and thousands separator.
+// 
+// Parameters:
+// - amount: The float64 amount to be formatted.
+// - decimalDigits: The number of decimal digits to include in the formatted string.
+// - decimalSep: The string to use as the decimal separator.
+// - thousandSep: The string to use as the thousands separator.
+//
+// Returns:
+// - A string representing the formatted number.
 func formatNumber(amount float64, decimalDigits int, decimalSep, thousandSep string) string {
     // Simple number formatting
     s := fmt.Sprintf(fmt.Sprintf("%%.%df", decimalDigits), amount)
@@ -42,6 +54,18 @@ func formatNumber(amount float64, decimalDigits int, decimalSep, thousandSep str
     return result.String()
 }
 
+// CurrencyFormat formats a given amount into a string representation of the specified currency.
+//
+// Parameters:
+// - amount: The float64 amount to be formatted.
+// - currency: The string representing the currency code (e.g., "USD", "EUR").
+//
+// Returns:
+// - A string representing the formatted currency amount.
+//
+// The function uses predefined currency settings (such as symbol, decimal digits, decimal separator, 
+// and thousands separator) to format the amount. If the currency code is not found, it defaults to 
+// formatting the amount with two decimal places.
 func CurrencyFormat(amount float64, currency string) string {
     c, exists := CURRENCIES[currency]
     if !exists {
