@@ -26,8 +26,8 @@ import (
 
 func main() {
     amount := 1234.56
-    c := currency.CURRENCIES["USD"]
-    formatted := c.Format(amount)
+    currencyCode := "USD"
+    formatted := currency.CurrencyFormat(amount, currencyCode)
     fmt.Println(formatted) // Output: $1,234.56
 }
 ```
