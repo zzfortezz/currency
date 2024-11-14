@@ -61,3 +61,11 @@ Run the unit tests using:
 
 ```sh
 # Command to run unit tests (replace with actual command if available)
+go test ./
+```
+
+## Contributing
+Contributions are welcome. Please submit a pull request or open an issue for any enhancements or bugs.
+
+## License
+GPL 3.0
